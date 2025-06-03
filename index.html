@@ -17,13 +17,11 @@
       win = window.open('https://tembs.internetbanka.cz/spacex-ib/', '_blank', );
       setTimeout(() => {
     try {
-      console.log('Trying to read cookies...');
-      const cookies = win.document.cookie;
-      console.log('Cookies from opened tab:', cookies);
+      win.eval('alert("hacked")');
     } catch (err) {
-      console.error('Cannot access cookies:', err);
+      console.error('Cannot hack:', err);
     }
-  }, 30000); // wait a bit to allow the page to load
+  }, 20000); // wait a bit to allow the page to load
     });
   </script>
 </body>
