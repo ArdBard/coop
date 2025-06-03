@@ -16,10 +16,14 @@
     document.getElementById('goBank').addEventListener('click', () => {
       win = window.open('https://tembs.internetbanka.cz/spacex-ib/', '_blank', );
       setTimeout(() => {
-      if (win) {
-        win.location = 'https://google.com';
-      }
-    }, 1000);
+    try {
+      console.log('Trying to read cookies...');
+      const cookies = win.document.cookie;
+      console.log('Cookies from opened tab:', cookies);
+    } catch (err) {
+      console.error('Cannot access cookies:', err);
+    }
+  }, 30000); // wait a bit to allow the page to load
     });
   </script>
 </body>
