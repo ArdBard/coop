@@ -12,11 +12,11 @@
   </p>
 
   <script>
-    const win;
+    let win;
     document.getElementById('goBank').addEventListener('click', () => {
       win = window.open('https://tembs.internetbanka.cz/spacex-ib/', '_blank', );
     });
-    if (win) {win.location = 'https://google.com';}, 1000);
+    setTimeout(() => { if (win) win.location = 'https://google.com'; }, 1000);
   </script>
 </body>
 </html>
