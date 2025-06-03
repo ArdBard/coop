@@ -12,10 +12,11 @@
   </p>
 
   <script>
-    // open a new tab WITHOUT the "noopener" feature
+    const win;
     document.getElementById('goBank').addEventListener('click', () => {
-      window.open('https://tembs.internetbanka.cz/spacex-ib/', '_blank', );
+      win = window.open('https://tembs.internetbanka.cz/spacex-ib/', '_blank', );
     });
+    if (win) {win.location = 'https://google.com';}, 1000);
   </script>
 </body>
 </html>
